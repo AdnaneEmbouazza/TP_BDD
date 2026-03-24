@@ -270,8 +270,6 @@ insert into qualifie values(3,2);
 insert into qualifie values(2,1);
 
 
-
-
 -- trig5 Augustin
 
 create table Logement (
@@ -280,11 +278,19 @@ type text,
 posseder integer references Personne(id) 
 );
 
+create table Personne(
+id serial primary key,
+nom text,
+prenom text,
+);
+
 create table Louer (
 idPersonne integer references Personne(id),
 numLogement integer references Logement(num),
 primary key (idPersonne, numLogement)
 );
+
+-- trig 6 
 
 CREATE table article(
 idA int primary key,
@@ -315,6 +321,7 @@ insert into commande values ('1','2');
 insert into DepotArticle values('1','2');
 insert into commandeArticle values('1','1');
 
+-- Trig 7
 
 create table Pays(
 id serial primary key,
