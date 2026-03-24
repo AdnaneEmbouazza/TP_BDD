@@ -229,7 +229,8 @@ insert into pret values (2, 'Livre B', 3); -- OK
 create table professeur(
 id integer primary key,
 nom text,
-prenom text);
+prenom text
+);
 
 insert into professeur values(1,'monsieur','man');
 insert into professeur values(2,'madame','miss');
@@ -272,16 +273,16 @@ insert into qualifie values(2,1);
 
 -- trig5 Augustin
 
+create table Personne(
+id serial primary key,
+nom text,
+prenom text
+);
+
 create table Logement (
 num integer primary key,
 type text,
 posseder integer references Personne(id) 
-);
-
-create table Personne(
-id serial primary key,
-nom text,
-prenom text,
 );
 
 create table Louer (
